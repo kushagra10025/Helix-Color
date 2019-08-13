@@ -10,13 +10,19 @@ public class BallBounce : MonoBehaviour {
     public int perfectPass = 0;
     private bool _ignoreNextCollision;
     public bool isSuperSpeedActive;
-
+    public bool canDie = true;
     public float forceMultiplier = 7.0f;
     
     private int _prevCollider = 0;
 
+    public static BallBounce Instance;
     private void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+
+        //canDie = true;
+        
         _startPos = transform.position;
     }
 
@@ -26,23 +32,19 @@ public class BallBounce : MonoBehaviour {
     {
         if (_ignoreNextCollision)
             return;
-        if (isSuperSpeedActive)
+        if (isSuperSpeedActive && !canDie)
         {
-            
             Collider childCollider = other.contacts[0].otherCollider;
             
-            Debug.Log(childCollider.gameObject.name);
-            //if (!other.transform.GetComponent<Goal>())
             if ((childCollider.gameObject.CompareTag("LastOne")))
             {
-                //Has reached last one
-                Debug.Log("Has Reached Last One!");
-                //Destroy(other.transform.parent.gameObject);
+                //Debug.Log("Has Reached Last One!");
+                Destroy(other.transform.parent.gameObject);
             }
             else
             {
-                Debug.Log("Has Not Reached Last One!");
-                Destroy(childCollider.gameObject);
+                //Debug.Log("Has Not Reached Last One!");
+                Destroy(other.gameObject);
             }
 
         }
@@ -67,25 +69,27 @@ public class BallBounce : MonoBehaviour {
         if (other == null)
             return;
         
-        //Collider childCollider = other.contacts[0].otherCollider;
-
         if (_prevCollider == 1 && other.gameObject.CompareTag("blankObj"))
         {
             _prevCollider = 0;
-            perfectPass++;
         }
-        
+        perfectPass++;
     }
 
     private void Update()
     {
-        Debug.Log("Coll Stat - "+ _prevCollider + "      PerfectPass - "+ perfectPass);
-        
+        //Debug.Log("Coll Stat - "+ _prevCollider + "      PerfectPass - "+ perfectPass);
         // activate super speed
         if (perfectPass >= 3 && !isSuperSpeedActive)
         {
             isSuperSpeedActive = true;
+            canDie = false;
             rb.AddForce(Vector3.down * forceMultiplier, ForceMode.Impulse);
+        }
+
+        if (perfectPass < 3)
+        {
+            canDie = true;
         }
 
     }

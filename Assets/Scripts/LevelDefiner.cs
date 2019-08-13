@@ -1,15 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class LevelDefiner : MonoBehaviour
 {
     public static LevelDefiner Instance;
 
     [SerializeField] private Color obstacleMaterial = Color.white;
-    
+
+    [SerializeField]private BallBounce _ballBounce;
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
+    }
+
+    private void Start()
+    {
+        _ballBounce = FindObjectOfType<BallBounce>();
+
     }
 
     private void OnCollisionEnter(Collision other)
@@ -27,7 +35,7 @@ public class LevelDefiner : MonoBehaviour
         if( Mathf.Approximately(matColor.r,obstacleMaterial.r) &&
             Mathf.Approximately(matColor.g,obstacleMaterial.g) &&
             Mathf.Approximately(matColor.b,obstacleMaterial.b) &&
-            Mathf.Approximately(matColor.a,obstacleMaterial.a))
+            Mathf.Approximately(matColor.a,obstacleMaterial.a) && _ballBounce.canDie)
         {
             //Death Handler
             UIHandler.Instance.PlaceholderTextToPrint("You Died!");

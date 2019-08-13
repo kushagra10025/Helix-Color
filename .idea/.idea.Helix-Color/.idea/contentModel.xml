@@ -14,9 +14,6 @@
           <e p="LevelGeneration.cs" t="Include" />
           <e p="Rotator.cs" t="Include" />
           <e p="UIHandler.cs" t="Include" />
-          <e p="Waste" t="Include">
-            <e p="Ball.cs" t="Include" />
-          </e>
         </e>
       </e>
       <e p="Helix-Color.sln" t="IncludeFlat" />
