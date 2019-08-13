@@ -79,13 +79,12 @@ public class BallBounce : MonoBehaviour {
 
     private void Update()
     {
-        //Debug.Log("Coll Stat - "+ _prevCollider + "      PerfectPass - "+ perfectPass);
+        Debug.Log("Coll Stat - "+ _prevCollider + "      PerfectPass - "+ perfectPass);
         
         // activate super speed
         if (perfectPass >= 3 && !isSuperSpeedActive)
         {
             isSuperSpeedActive = true;
-            Debug.Log("isSSATrue");
             rb.AddForce(Vector3.down * forceMultiplier, ForceMode.Impulse);
         }
 
