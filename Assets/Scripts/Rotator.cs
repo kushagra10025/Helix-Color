@@ -20,33 +20,33 @@ public class Rotator : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetMouseButton(0)) 
-        {
-            float horizontal = Input.GetAxis("Mouse X");
-
-            var eulerP = (-Vector3.up * horizontal )* (350.0f * Time.deltaTime);
-
-            transform.Rotate(eulerP, Space.World);
-        }
-        
-//        if (Input.touchCount > 0 && Input.touchCount <=1 && isInputActive)
+//        if (Input.GetMouseButton(0)) 
 //        {
-//            Touch touch = Input.GetTouch(0);
+//            float horizontal = Input.GetAxis("Mouse X");
 //
-//            switch (touch.phase)
-//            {
-//                case TouchPhase.Began:
-//                    _lastPoint = touch.position;
-//                    break;
-//                case TouchPhase.Moved:
-//                    _offset = touch.position.x - _lastPoint.x;
-//                    transform.Rotate(0,_offset * rotationSensitivity * -1,0);
+//            var eulerP = (-Vector3.up * horizontal )* (350.0f * Time.deltaTime);
 //
-//                    _lastPoint = touch.position;
-//                    break;
-//                case TouchPhase.Ended:
-//                    break;
-//            }
+//            transform.Rotate(eulerP, Space.World);
 //        }
+        
+        if (Input.touchCount > 0 && Input.touchCount <=1 && isInputActive)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    _lastPoint = touch.position;
+                    break;
+                case TouchPhase.Moved:
+                    _offset = touch.position.x - _lastPoint.x;
+                    transform.Rotate(0,_offset * rotationSensitivity * -1,0);
+
+                    _lastPoint = touch.position;
+                    break;
+                case TouchPhase.Ended:
+                    break;
+            }
+        }
     }
 }

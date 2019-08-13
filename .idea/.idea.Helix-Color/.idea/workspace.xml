@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helix-Color/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helix-Color/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallBounce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallBounce.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDefiner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDefiner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rotator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waste.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waste/Ball.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waste/Ball.cs.meta" beforeDir="false" />
@@ -17,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BallBounce.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
@@ -111,18 +112,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rotator.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="105">
+              <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
               <folding>
-                <marker date="1565693234315" expanded="false" signature="6:32" ph="..." />
-                <marker date="1565693234315" expanded="true" signature="71:1340" ph="{...}" />
-                <marker date="1565693234315" expanded="true" signature="326:363" ph="{...}" />
-                <marker date="1565693234315" expanded="true" signature="390:1338" ph="{...}" />
-                <marker date="1565693234315" expanded="true" signature="434:645" ph="{...}" />
-                <marker date="1565693234315" expanded="true" signature="655:1332" ph="/* if (Input.touchCount &gt; 0 &amp;&amp; Input.touchCount &lt;=1 &amp;&amp; isInputActive) ... */" />
+                <marker date="1565711878674" expanded="false" signature="6:32" ph="..." />
+                <marker date="1565711878674" expanded="true" signature="71:1318" ph="{...}" />
+                <marker date="1565711878674" expanded="true" signature="326:363" ph="{...}" />
+                <marker date="1565711878674" expanded="true" signature="390:1316" ph="{...}" />
+                <marker date="1565711878674" expanded="true" signature="397:661" ph="/* if (Input.GetMouseButton(0)) ... */" />
+                <marker date="1565711878674" expanded="true" signature="745:1310" ph="{...}" />
+                <marker date="1565711878674" expanded="true" signature="834:1300" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -167,6 +169,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelDefiner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BallBounce.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rotator.cs" />
       </list>
     </option>
   </component>
@@ -253,12 +256,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565705358444</updated>
-      <workItem from="1565705363457" duration="3397000" />
+      <workItem from="1565705363457" duration="4175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3397000" />
+    <option name="totallyTimeSpent" value="4175000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,21 +328,6 @@
             <marker date="1565533964984" expanded="true" signature="84:1319" ph="{...}" />
             <marker date="1565533964984" expanded="true" signature="221:292" ph="{...}" />
             <marker date="1565533964984" expanded="true" signature="350:1317" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rotator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <marker date="1565693234315" expanded="false" signature="6:32" ph="..." />
-            <marker date="1565693234315" expanded="true" signature="71:1340" ph="{...}" />
-            <marker date="1565693234315" expanded="true" signature="326:363" ph="{...}" />
-            <marker date="1565693234315" expanded="true" signature="390:1338" ph="{...}" />
-            <marker date="1565693234315" expanded="true" signature="434:645" ph="{...}" />
-            <marker date="1565693234315" expanded="true" signature="655:1332" ph="/* if (Input.touchCount &gt; 0 &amp;&amp; Input.touchCount &lt;=1 &amp;&amp; isInputActive) ... */" />
           </folding>
         </state>
       </provider>
@@ -426,6 +414,22 @@
             <marker date="1565708701425" expanded="true" signature="2305:2352" ph="{...}" />
             <marker date="1565708701425" expanded="true" signature="2388:2440" ph="{...}" />
             <marker date="1565708701425" expanded="true" signature="2475:2525" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rotator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+          <folding>
+            <marker date="1565711878674" expanded="false" signature="6:32" ph="..." />
+            <marker date="1565711878674" expanded="true" signature="71:1318" ph="{...}" />
+            <marker date="1565711878674" expanded="true" signature="326:363" ph="{...}" />
+            <marker date="1565711878674" expanded="true" signature="390:1316" ph="{...}" />
+            <marker date="1565711878674" expanded="true" signature="397:661" ph="/* if (Input.GetMouseButton(0)) ... */" />
+            <marker date="1565711878674" expanded="true" signature="745:1310" ph="{...}" />
+            <marker date="1565711878674" expanded="true" signature="834:1300" ph="{...}" />
           </folding>
         </state>
       </provider>
