@@ -1,6 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
+public enum InputType
+{
+    Touch,Mouse
+}
+
 public class Rotator : MonoBehaviour {
 
     [SerializeField]private float rotationSensitivity = 0f;
@@ -13,39 +18,47 @@ public class Rotator : MonoBehaviour {
 
     public bool isInputActive = true;
 
+    public InputType inputType;
+    
     private void Awake()
     {
         Instance = this;
+        inputType = InputType.Touch;
     }
 
     private void Update()
     {
-//        if (Input.GetMouseButton(0)) 
-//        {
-//            float horizontal = Input.GetAxis("Mouse X");
-//
-//            var eulerP = (-Vector3.up * horizontal )* (350.0f * Time.deltaTime);
-//
-//            transform.Rotate(eulerP, Space.World);
-//        }
-        
-        if (Input.touchCount > 0 && Input.touchCount <=1 && isInputActive)
+        if(inputType == InputType.Mouse)
         {
-            Touch touch = Input.GetTouch(0);
-
-            switch (touch.phase)
+            if (Input.GetMouseButton(0))
             {
-                case TouchPhase.Began:
-                    _lastPoint = touch.position;
-                    break;
-                case TouchPhase.Moved:
-                    _offset = touch.position.x - _lastPoint.x;
-                    transform.Rotate(0,_offset * rotationSensitivity * -1,0);
+                float horizontal = Input.GetAxis("Mouse X");
 
-                    _lastPoint = touch.position;
-                    break;
-                case TouchPhase.Ended:
-                    break;
+                var eulerP = (-Vector3.up * horizontal) * (350.0f * Time.deltaTime);
+
+                transform.Rotate(eulerP, Space.World);
+            }
+        }
+        if(inputType == InputType.Touch)
+        {
+            if (Input.touchCount > 0 && Input.touchCount <= 1 && isInputActive)
+            {
+                Touch touch = Input.GetTouch(0);
+
+                switch (touch.phase)
+                {
+                    case TouchPhase.Began:
+                        _lastPoint = touch.position;
+                        break;
+                    case TouchPhase.Moved:
+                        _offset = touch.position.x - _lastPoint.x;
+                        transform.Rotate(0, _offset * rotationSensitivity * -1, 0);
+
+                        _lastPoint = touch.position;
+                        break;
+                    case TouchPhase.Ended:
+                        break;
+                }
             }
         }
     }

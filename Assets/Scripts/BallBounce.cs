@@ -3,17 +3,19 @@ using UnityEngine;
 
 public class BallBounce : MonoBehaviour {
 
+    //Public Variables
     public Rigidbody rb;
     public float impulseForce = 5f;
-
-    private Vector3 _startPos;
     public int perfectPass = 0;
-    private bool _ignoreNextCollision;
     public bool isSuperSpeedActive;
     public bool canDie = true;
     public float forceMultiplier = 7.0f;
     
+    //Private Variables
+    private Vector3 _startPos;
+    private bool _ignoreNextCollision;
     private int _prevCollider = 0;
+    private Animator _animator;
 
     public static BallBounce Instance;
     private void Awake()
@@ -24,6 +26,7 @@ public class BallBounce : MonoBehaviour {
         //canDie = true;
         
         _startPos = transform.position;
+        _animator = gameObject.GetComponent<Animator>();
     }
 
 
@@ -84,12 +87,14 @@ public class BallBounce : MonoBehaviour {
         {
             isSuperSpeedActive = true;
             canDie = false;
+            _animator.SetBool("isInAir",true);
             rb.AddForce(Vector3.down * forceMultiplier, ForceMode.Impulse);
         }
 
         if (perfectPass < 3)
         {
             canDie = true;
+            _animator.SetBool("isInAir",false);
         }
 
     }

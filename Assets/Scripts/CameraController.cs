@@ -29,22 +29,24 @@ public class CameraController : MonoBehaviour
         var cFt = _virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
 
         cFt.m_CameraDistance = 13.5f;
+        cFt.m_LookaheadSmoothing = 3.0f;
         
         //Height & Y Axis Settings
         
         cFt.m_SoftZoneHeight = 0.5f;
         cFt.m_ScreenY = 0.65f;
         cFt.m_YDamping = 0f;
-        cFt.m_DeadZoneHeight = 0.20f;
+        cFt.m_DeadZoneHeight = 0.24f;
 
         // Width & X Axis Settings
         
         cFt.m_SoftZoneWidth = 0.5f;
-        cFt.m_DeadZoneWidth = 0.15f;
+        cFt.m_XDamping = 0f;
+        cFt.m_DeadZoneWidth = 0.17f;
         
         // z Axis Values
 
-        cFt.m_ZDamping = 10f;
+        cFt.m_ZDamping = 20f;
 
         //Camera.main.GetComponent<Transform>().SetParent(playerBall.transform);
 
