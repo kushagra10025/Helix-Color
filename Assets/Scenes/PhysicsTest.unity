@@ -453,8 +453,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2537192247323147889, guid: 255560225e1571446a730db8ad8563ab,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259796594359585113, guid: 255560225e1571446a730db8ad8563ab,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676258666356258528, guid: 255560225e1571446a730db8ad8563ab,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973129760028541851, guid: 255560225e1571446a730db8ad8563ab,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907053277482095304, guid: 255560225e1571446a730db8ad8563ab,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5829960454545633006, guid: 255560225e1571446a730db8ad8563ab,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401236856597182964, guid: 255560225e1571446a730db8ad8563ab,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398732874579364101, guid: 255560225e1571446a730db8ad8563ab,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 255560225e1571446a730db8ad8563ab, type: 3}
+--- !u!1 &1537572546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 676313345563179193, guid: 255560225e1571446a730db8ad8563ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1537572545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1537572547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537572546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9aa2b7e9e0317c4ab3904d15fee987a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPower: 20
+  explosionRadius: 100
+  childObjects: []
 --- !u!1001 &2041441827
 PrefabInstance:
   m_ObjectHideFlags: 0
