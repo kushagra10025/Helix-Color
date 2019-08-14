@@ -23,7 +23,7 @@ public class Rotator : MonoBehaviour {
     private void Awake()
     {
         Instance = this;
-        inputType = InputType.Touch;
+        //inputType = InputType.Touch;
     }
 
     private void Update()
