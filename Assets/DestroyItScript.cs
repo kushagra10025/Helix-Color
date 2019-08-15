@@ -26,26 +26,19 @@ public class DestroyItScript : MonoBehaviour
         //DestroyIt();
     }
 
-//    public void AddChildToList(GameObject obj)
-//    {
-//        for (int i = 0; i < obj.transform.childCount; i++)
-//        {
-//            childObjects.Add(obj.transform.GetChild(i).gameObject);
-//        }
-//    }
+    public void AddChildToList(GameObject obj)
+    {
+        for (int i = 0; i < obj.transform.childCount; i++)
+        {
+            childObjects.Add(obj.transform.GetChild(i).gameObject);
+        }
+    }
 
     public void DestroyIt()
     {
         foreach (var t in childObjects)
         {
-            _rigidbody = t.GetComponent<Rigidbody>();
-            if (_rigidbody != null)
-            {
-                _rigidbody.isKinematic = false;
-                _rigidbody.AddExplosionForce(explosionForce * 1000f, t.transform.position, explosionRadius * 100f, -3f);
-                //_rigidbody.isKinematic = true;
-                //Destroy(_rigidbody);
-            }
+            Destroy(t);
         }
 
 
