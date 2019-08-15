@@ -35,7 +35,8 @@ public class LevelDefiner : MonoBehaviour
         if( Mathf.Approximately(matColor.r,obstacleMaterial.r) &&
             Mathf.Approximately(matColor.g,obstacleMaterial.g) &&
             Mathf.Approximately(matColor.b,obstacleMaterial.b) &&
-            Mathf.Approximately(matColor.a,obstacleMaterial.a) && _ballBounce.canDie)
+            Mathf.Approximately(matColor.a,obstacleMaterial.a) &&
+            _ballBounce.canDie)
         {
             //Death Handler
             UIHandler.Instance.PlaceholderTextToPrint("You Died!");

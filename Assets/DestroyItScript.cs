@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class DestroyItScript : MonoBehaviour
 {
     public static DestroyItScript Instance;
     public float explosionForce = 10f;
-    public float explosionRadius = 10f;
+    public float explosionRadius = 100f;
     public List<GameObject> childObjects;
 
     private Rigidbody _rigidbody;
@@ -20,27 +21,35 @@ public class DestroyItScript : MonoBehaviour
         //AddChildToList();
     }
 
-    public void AddChildToList(GameObject obj)
+    private void Start()
     {
-        for (int i = 0; i < obj.transform.childCount; i++)
-        {
-            childObjects.Add(obj.transform.GetChild(i).gameObject);
-        }
+        //DestroyIt();
     }
+
+//    public void AddChildToList(GameObject obj)
+//    {
+//        for (int i = 0; i < obj.transform.childCount; i++)
+//        {
+//            childObjects.Add(obj.transform.GetChild(i).gameObject);
+//        }
+//    }
 
     public void DestroyIt()
     {
-        foreach (var obj in childObjects)
+        foreach (var t in childObjects)
         {
-            if (obj.GetComponent<Rigidbody>() == null)
-                obj.AddComponent<Rigidbody>();
-
-            _rigidbody = obj.GetComponent<Rigidbody>();
-            _rigidbody.AddExplosionForce(explosionForce,gameObject.transform.position,explosionRadius);
-            
+            _rigidbody = t.GetComponent<Rigidbody>();
+            if (_rigidbody != null)
+            {
+                _rigidbody.isKinematic = false;
+                _rigidbody.AddExplosionForce(explosionForce * 1000f, t.transform.position, explosionRadius * 100f, -3f);
+                //_rigidbody.isKinematic = true;
+                //Destroy(_rigidbody);
+            }
         }
 
-        for (int i = 0; i < childObjects.Count; i++)
+
+        for (var i = 0; i < childObjects.Count; i++)
         {
             childObjects.RemoveAt(i);
         }

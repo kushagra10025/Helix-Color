@@ -16,7 +16,7 @@ public class BallBounce : MonoBehaviour {
     private bool _ignoreNextCollision;
     private int _prevCollider = 0;
     private Animator _animator;
-
+    
     public static BallBounce Instance;
     private void Awake()
     {
@@ -38,18 +38,19 @@ public class BallBounce : MonoBehaviour {
         if (isSuperSpeedActive && !canDie)
         {
             Collider childCollider = other.contacts[0].otherCollider;
-            DestroyItScript.Instance.AddChildToList(other.gameObject);
+            //DestroyItScript.Instance.AddChildToList(other.gameObject);
 
             if ((childCollider.gameObject.CompareTag("LastOne")))
             {
-                //Debug.Log("Has Reached Last One!");
-                Destroy(other.transform.parent.gameObject);
+                Debug.Log("Has Reached Last One!");
+                //Destroy(other.transform.parent.gameObject);
             }
             else
             {
                 //Debug.Log("Has Not Reached Last One!");
-                DestroyItScript.Instance.DestroyIt();
-                //Destroy(other.gameObject);
+               //Error//
+                //DestroyItScript.Instance.DestroyIt();
+                Destroy(other.gameObject);
             }
 
         }
@@ -64,9 +65,10 @@ public class BallBounce : MonoBehaviour {
         Invoke("AllowCollision", .2f);
 
         // Handling super speed
+        isSuperSpeedActive = false;
         _prevCollider = 1;
         perfectPass = 0;
-        isSuperSpeedActive = false;
+        //canDie = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -92,11 +94,14 @@ public class BallBounce : MonoBehaviour {
             _animator.SetBool("isInAir",true);
             rb.AddForce(Vector3.down * forceMultiplier, ForceMode.Impulse);
         }
-
-        if (perfectPass < 3)
+        else if (perfectPass < 3 && !isSuperSpeedActive)
         {
             canDie = true;
             _animator.SetBool("isInAir",false);
+        }
+        else
+        {
+            canDie = false;
         }
 
     }
