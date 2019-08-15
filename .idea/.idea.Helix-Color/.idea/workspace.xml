@@ -3,21 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="da330245-f794-441a-a93f-8027b7d42334" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helix-Color/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helix-Color/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DestroyItScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DestroyItScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/BallMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/BallMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/CylinderMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/CylinderMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/NormalMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/NormalMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ParticleMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ParticleMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HollowCylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/HollowCylinder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PhysicsTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PhysicsTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallBounce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallBounce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDefiner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDefiner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Helix-Color/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helix-Color/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="125" />
     <option name="width" value="1440" />
@@ -292,12 +278,12 @@
       <workItem from="1565789782196" duration="2574000" />
       <workItem from="1565799646025" duration="7644000" />
       <workItem from="1565850707730" duration="6792000" />
-      <workItem from="1565867413604" duration="3484000" />
+      <workItem from="1565867413604" duration="3640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27422000" />
+    <option name="totallyTimeSpent" value="27578000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -310,7 +296,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26693493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
