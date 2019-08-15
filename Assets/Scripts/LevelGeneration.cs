@@ -26,6 +26,8 @@ public class LevelGeneration : MonoBehaviour
     {
         if(Instance == null)
             Instance = this;
+     
+        //DontDestroyOnLoad(gameObject);
         
         if (hollowCylinderPatterns == null)
             return;

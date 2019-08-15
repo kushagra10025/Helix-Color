@@ -13,6 +13,8 @@ public class CameraController : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+        
+        //DontDestroyOnLoad(gameObject);
     }
     
     public void SetupCmCamera(GameObject playerBall)

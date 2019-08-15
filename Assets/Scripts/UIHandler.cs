@@ -14,6 +14,9 @@ public class UIHandler : MonoBehaviour
     {
         if(Instance == null)
             Instance = this;
+        
+        //DontDestroyOnLoad(gameObject);
+        
         if(restartGameButton == null)
             return;
     }

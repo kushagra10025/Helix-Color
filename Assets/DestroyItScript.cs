@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DestroyItScript : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class DestroyItScript : MonoBehaviour
     public List<GameObject> childObjects;
 
     private Rigidbody _rigidbody;
-   
+    private Vector3 _tempPos;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -38,13 +40,9 @@ public class DestroyItScript : MonoBehaviour
     {
         foreach (var t in childObjects)
         {
+            Debug.Log(t.name);
+            childObjects.Remove(t);
             Destroy(t);
-        }
-
-
-        for (var i = 0; i < childObjects.Count; i++)
-        {
-            childObjects.RemoveAt(i);
         }
     }
 }
