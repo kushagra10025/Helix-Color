@@ -29,7 +29,6 @@ public class LevelDefiner : MonoBehaviour
         
 
         MeshRenderer mats = childCollider.gameObject.GetComponent<MeshRenderer>();
-        
         Color matColor = mats.materials[0].color;
         
         if( Mathf.Approximately(matColor.r,obstacleMaterial.r) &&
