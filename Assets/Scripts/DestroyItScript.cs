@@ -11,7 +11,7 @@ public class DestroyItScript : MonoBehaviour
     public float explosionForce = 10f;
     public float explosionRadius = 100f;
     public List<GameObject> childObjects;
-    public Material dissolveShader;
+    public Shader dissolveShader;
     public float timeDissolve;
     
     private Rigidbody _rigidbody;
@@ -45,30 +45,21 @@ public class DestroyItScript : MonoBehaviour
         {
             //childObjects.Remove(t);
             //Destroy(t);
-            _meshRenderer = t.GetComponent<Renderer>();
+            t.tag = "changedObj";
+            _meshRenderer = t.GetComponent<MeshRenderer>();
 //            if(_meshRenderer.enabled == false)
 //                Debug.Log(t.name);
 
-            _meshRenderer.material = dissolveShader;
-            StartCoroutine("DissolveValue", _meshRenderer);
+            _meshRenderer.materials[0].shader = dissolveShader;
             DeleteGameObject();
         }
     }
 
     private void DeleteGameObject()
     {
-        if (Mathf.Approximately(dissolveShader.GetFloat("_DissolveValue"),-1f))
+        foreach (var childObject in childObjects)
         {
-            foreach (var childObject in childObjects)
-            {
-                Destroy(childObject.GetComponent<Collider>());
-            }
+            Destroy(childObject.GetComponent<Collider>());
         }
-    }
-
-    IEnumerator DissolveValue(Renderer mR)
-    {
-        mR.material.SetFloat("_DissolveValue",Mathf.Lerp(1.0f,-1.0f,timeDissolve));
-        yield return new WaitForSeconds(timeDissolve);
     }
 }

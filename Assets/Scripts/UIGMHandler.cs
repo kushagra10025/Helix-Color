@@ -2,9 +2,9 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UIHandler : MonoBehaviour
+public class UIGMHandler : MonoBehaviour
 {
-    public static UIHandler Instance;
+    public static UIGMHandler Instance;
 
     [SerializeField]private Text placeholderText = null;
     public GameObject restartGameButton;

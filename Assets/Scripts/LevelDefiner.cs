@@ -38,17 +38,17 @@ public class LevelDefiner : MonoBehaviour
             _ballBounce.canDie)
         {
             //Death Handler
-            UIHandler.Instance.PlaceholderTextToPrint("You Died!");
+            UIGMHandler.Instance.PlaceholderTextToPrint("You Died!");
             //UIHandler.Instance.restartGameButton.SetActive(true);
-            UIHandler.Instance.PauseGame();
+            UIGMHandler.Instance.PauseGame();
             Destroy(gameObject);
         }
         
         if (other.gameObject.CompareTag("InitialCylinder"))
         {
             //Level Finish Handler
-            UIHandler.Instance.PlaceholderTextToPrint("You Passed!");
-            UIHandler.Instance.PauseGame();
+            UIGMHandler.Instance.PlaceholderTextToPrint("You Passed!");
+            UIGMHandler.Instance.PauseGame();
             
             Destroy(gameObject);
         }

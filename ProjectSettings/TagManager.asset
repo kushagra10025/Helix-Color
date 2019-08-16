@@ -8,6 +8,7 @@ TagManager:
   - InitialCylinder
   - LastOne
   - blankObj
+  - changedObj
   layers:
   - Default
   - TransparentFX

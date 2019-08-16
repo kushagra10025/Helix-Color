@@ -183,7 +183,8 @@ MonoBehaviour:
   explosionForce: 10
   explosionRadius: 10
   childObjects: []
-  dissolveShader: {fileID: 2100000, guid: cad81f65690595646a37b3d563d8437a, type: 2}
+  dissolveShader: {fileID: -6465566751694194690, guid: e961fcfa45797294ca1b8c34c7edd3ce,
+    type: 3}
   timeDissolve: 1
 --- !u!1001 &9080083984377782962
 PrefabInstance:

@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 407433258126285879}
-  impulseForce: 3.5
+  impulseForce: 3.75
   perfectPass: 0
   isSuperSpeedActive: 0
   canDie: 1
