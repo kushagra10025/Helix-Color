@@ -48,6 +48,7 @@ public class LevelGeneration : MonoBehaviour
         _mainCylinderObj.tag = "MainCylinder";
         _initialCylinder = Instantiate(hollowCylinderPatterns[0]);
         _initialCylinder.tag = "InitialCylinder";
+        _initialCylinder.GetComponent<DestroyItScript>().enabled = false;
         
         for (int i = 1; i <= lengthForCylinder-1; i++)
         {

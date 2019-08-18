@@ -50,8 +50,12 @@ public class DestroyItScript : MonoBehaviour
 //            if(_meshRenderer.enabled == false)
 //                Debug.Log(t.name);
 
-            _meshRenderer.materials[0].shader = dissolveShader;
+            var matA = _meshRenderer.materials;
+            matA[0].shader = dissolveShader;
+            //var matA = materials[0];
+            matA[0].SetFloat("_TriggerTime",Time.timeSinceLevelLoad);
             DeleteGameObject();
+            StartCoroutine(ResetShaderTrigger(matA[0]));
         }
     }
 
@@ -61,5 +65,11 @@ public class DestroyItScript : MonoBehaviour
         {
             Destroy(childObject.GetComponent<Collider>());
         }
+    }
+
+    private IEnumerator ResetShaderTrigger(Material mat)
+    {
+        yield return new WaitForSeconds(5);
+        mat.SetFloat("_TriggerTime",999999);
     }
 }
