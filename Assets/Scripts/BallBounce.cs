@@ -40,17 +40,9 @@ public class BallBounce : MonoBehaviour {
             Collider childCollider = other.contacts[0].otherCollider;
             DestroyItScript.Instance.AddChildToList(other.gameObject);
 
-            if ((childCollider.gameObject.CompareTag("LastOne")))
+            if (!(childCollider.gameObject.CompareTag("LastOne")))
             {
-                Debug.Log("Has Reached Last One!");
-                //Destroy(other.transform.parent.gameObject);
-            }
-            else
-            {
-                //Debug.Log("Has Not Reached Last One!");
-                //Error//
                 DestroyItScript.Instance.DestroyIt();
-                //Destroy(other.gameObject);
             }
 
         }
