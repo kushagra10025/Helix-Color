@@ -850,7 +850,7 @@ MonoBehaviour:
     type: 3}
   lastCylinderPrefab: {fileID: 1481073674321839993, guid: 6cd8d3ddcd2653e40a7f19d2537dc469,
     type: 3}
-  lengthForCylinder: 20
+  lengthForCylinder: 6
   minGapBetweenObs: 2
 --- !u!4 &1387856931
 Transform:

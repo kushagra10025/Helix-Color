@@ -47,7 +47,7 @@ PrefabInstance:
     - target: {fileID: 2490943254448345398, guid: 1080299221d862e4b926ba031f7b63f3,
         type: 3}
       propertyPath: m_TagString
-      value: LastOne
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2490943254448345399, guid: 1080299221d862e4b926ba031f7b63f3,
         type: 3}
