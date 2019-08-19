@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_XDamping: 0
   m_YDamping: 0
-  m_ZDamping: 3
+  m_ZDamping: 3.5
   m_ScreenX: 0.5
   m_ScreenY: 0.65
   m_CameraDistance: 13.5

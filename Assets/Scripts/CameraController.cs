@@ -37,7 +37,7 @@ public class CameraController : MonoBehaviour
         
         cFt.m_SoftZoneHeight = 0.5f;
         cFt.m_ScreenY = 0.65f;
-        cFt.m_YDamping = 0f;
+        cFt.m_YDamping = 0f;//To make the camera immediately follow the ball upon falling
         cFt.m_DeadZoneHeight = 0.24f;
 
         // Width & X Axis Settings
@@ -48,7 +48,7 @@ public class CameraController : MonoBehaviour
         
         // z Axis Values
 
-        cFt.m_ZDamping = 20f;
+        cFt.m_ZDamping = 3.5f; // To make smooth camera movement and make the camera from moving too far
 
         //Camera.main.GetComponent<Transform>().SetParent(playerBall.transform);
 
